@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <title>Document</title>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&amp;display=swap" rel="stylesheet">
+        
+        <link rel = "stylesheet"  href="assets/css/stile.css">    
+    </head>
+
+
+    <body>
+
+      
+        <div class="cursor hover" style="transform: translate(calc(56px - 50%), calc(69px - 50%));"></div>
+        <div class="outline hover" style="transform: translate(calc(56px - 50%), calc(69px - 50%));"></div>
+      
+        <div id="nav-hamburger" class="link">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      
+        <nav class="menu">
+      
+          <a href="Sito.html">
+            <span></span>
+            <span>Home</span> 
+            <img src="" alt="">
+          </a>
+      
+          <a href="About.html">
+            <span>About</span> 
+            <img src="" alt="">
+          </a>
+          
+          <a href="Service.html">
+            <span>Services</span>
+          <img src="" alt="">
+      
+          </a>
+          <a href="Contacts.html">
+            <span>Contacts</span> 
+          <img src="" alt="">
+      
+          </a>
+        </nav>
+      
+      
+        <h1 cursor-class="arrow"><a href="#">La nostra Storia</a></h1>
+      
+        <p><a href="Sito.html">StyleHouse</a> è molto più di un negozio di abbigliamento, è l'espressione della passione di Carlo per la moda e la sua visione di rendere la bellezza e l'eleganza accessibili a tutti. Il negozio, con il suo arredamento moderno e accogliente,
+            riflette la personalità vivace e creativa del suo giovane fondatore. 
+
+            Fin dall'inizio, Andrea ha avuto una visione chiara: 
+            offrire una selezione di abbigliamento moderno e all'avanguardia,
+             che abbracciasse tutte le tendenze più recenti della moda, senza però tralasciare la qualità e il comfort. 
+             I capi sono attentamente selezionati per rispecchiare i gusti e le esigenze di una clientela variegata e dinamica.
+          </p>
+      
+         <script> 
+      
+      
+      /* menu */
+      let items = document.querySelectorAll('.menu a');
+      
+      
+      for (let item of items) {
+      
+        item.addEventListener("mousemove", function(e){
+      
+          const rect = item.getBoundingClientRect();
+          const img = item.querySelector('img');
+      
+          img.style.left = `${e.clientX - rect.left}px`;
+          img.style.top = `${e.clientY - rect.top}px`;
+      
+        });
+      
+      }
+         
+         
+         /* hamburger */ 
+        
+      
+      
+      let item = document.querySelector('#nav-hamburger');
+      item.addEventListener("click", function() {
+        document.body.classList.toggle('open');
+      });
+      
+      /*cursor custom*/
+      
+      let outline = document.querySelector('.outline');
+      let cursor = document.querySelector('.cursor');
+      let a = document.querySelectorAll('.link, a');
+      
+      
+      document.addEventListener('mousemove', function(e){
+        let x = e.clientX;
+        let y = e.clientY;
+        outline.style.transform = `translate( calc(${x}px - 50%), calc(${y}px - 50%) )`;
+        cursor.style.transform = `translate( calc(${x}px - 50%) , calc(${y}px - 50%) )`;
+      });
+      
+      
+      a.forEach((item) => {
+        item.addEventListener('mouseover', () => {
+          outline.classList.add('hover');
+          cursor.classList.add('hover');
+        });
+        item.addEventListener('mouseleave', () => {
+          outline.classList.remove('hover');
+          cursor.classList.remove('hover');
+      
+        });
+      });
+      
+      
+      
+        
+        </script>
+      
+      
+      </body>
+
+
+
+
+
+
+</html>

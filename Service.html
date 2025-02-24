@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <title>Document</title>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&amp;display=swap" rel="stylesheet">
+        
+        <link rel = "stylesheet"  href="assets/css/stile.css">    
+    </head>
+
+
+    <body>
+
+      
+        <div class="cursor hover" style="transform: translate(calc(56px - 50%), calc(69px - 50%));"></div>
+        <div class="outline hover" style="transform: translate(calc(56px - 50%), calc(69px - 50%));"></div>
+      
+        <div id="nav-hamburger" class="link">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      
+        <nav class="menu">
+      
+          <a href="Sito.html">
+            <span></span>
+            <span>Home</span> 
+            <img src="" alt="">
+          </a>
+      
+          <a href="About.html">
+            <span>About</span> 
+            <img src="" alt="">
+          </a>
+          
+          <a href="Service.html">
+            <span>Servizi</span>
+          <img src="" alt="">
+      
+          </a>
+          <a href="Contacts.html">
+            <span>Contatti</span> 
+          <img src="" alt="">
+      
+          </a>
+        </nav>
+      
+      
+        <h1 cursor-class="arrow"><a href="#">Servizi</a></h1>
+      
+        <p><a href="Sito.html">StyleHouse</a> il nostro concept store unico che unisce il meglio del mondo della moda con un'esclusiva esperienza di parrucchiere.
+            <a>Servizi di Abbigliamento</a>:
+La nostra collezione di abbigliamento offre una vasta gamma di capi e accessori curati con attenzione e dedizione. Dalle ultime tendenze alla moda senza tempo, abbiamo selezionato capi per soddisfare i gusti e le esigenze di ogni cliente. I nostri esperti Guida-Stile sono sempre pronti ad assistervi con passione e professionalità, offrendovi suggerimenti personalizzati e abbinamenti unici.
+ Che si tratti di trovare il look perfetto per un'occasione speciale o di rinnovare il vostro guardaroba con stile, siamo qui per farvi sentire al meglio.
+
+ <a>Servizi di Parruchiere</a>:
+Nel nostro moderno e rilassante salone di parrucchiere, la vostra chioma è nelle mani esperte dei nostri talentuosi hairstylist.
+ Dal taglio alla piega, dal colore alle acconciature, ci prendiamo cura dei vostri capelli con prodotti di alta qualità e 
+ tecniche innovative. Ogni servizio di parrucchiere viene personalizzato in base alle vostre esigenze e desideri, 
+ con l'obiettivo di farvi sentire sicuri e soddisfatti del vostro look.
+
+ <a>Servizi Integrati</a>:
+Ma la vera magia di StyleHouse risiede nella possibilità di combinare i servizi di abbigliamento e parrucchiere 
+per creare un'esperienza di bellezza a 360 gradi. I nostri Commessi e hairstylist collaborano sinergicamente,
+lavorano insieme per valorizzare la vostra immagine e donarvi un look unico e armonioso. 
+Che siate in cerca di un completo rinnovamento o di piccoli ritocchi per esaltare il vostro stile, 
+la nostra equipe di professionisti vi accompagnerà 
+          </p>
+      
+         <script> 
+      
+      
+      /* menu */
+      let items = document.querySelectorAll('.menu a');
+      
+      
+      for (let item of items) {
+      
+        item.addEventListener("mousemove", function(e){
+      
+          const rect = item.getBoundingClientRect();
+          const img = item.querySelector('img');
+      
+          img.style.left = `${e.clientX - rect.left}px`;
+          img.style.top = `${e.clientY - rect.top}px`;
+      
+        });
+      
+      }
+         
+         
+         /* hamburger */ 
+        
+      
+      
+      let item = document.querySelector('#nav-hamburger');
+      item.addEventListener("click", function() {
+        document.body.classList.toggle('open');
+      });
+      
+     /*cursor custom*/
+
+      let outline = document.querySelector('.outline');
+      let cursor = document.querySelector('.cursor');
+      let a = document.querySelectorAll('.link, a');
+      
+      
+      document.addEventListener('mousemove', function(e){
+        let x = e.clientX;
+        let y = e.clientY;
+        outline.style.transform = `translate( calc(${x}px - 50%), calc(${y}px - 50%) )`;
+        cursor.style.transform = `translate( calc(${x}px - 50%) , calc(${y}px - 50%) )`;
+      });
+      
+      
+      a.forEach((item) => {
+        item.addEventListener('mouseover', () => {
+          outline.classList.add('hover');
+          cursor.classList.add('hover');
+        });
+        item.addEventListener('mouseleave', () => {
+          outline.classList.remove('hover');
+          cursor.classList.remove('hover');
+      
+        });
+      });
+      
+      
+      
+        
+        </script>
+      
+      
+      </body>
+
+
+
+
+
+
+</html>
