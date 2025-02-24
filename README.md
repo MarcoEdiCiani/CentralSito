@@ -3,14 +3,14 @@ Un sito web di esempio creato per una boutique di moda. Il sito include 4 pagine
 È sviluppato con HTML5 e CSS3 per presentare in modo semplice ed elegante i prodotti e le informazioni della boutique.
 
 ## Funzionalità
--**Home Page**: Una pagina principale che presenta la boutique, con un'introduzione al marchio .
--**About**: Una pagina che descrive la storia della boutique, la missione e la visione.
--**Servizi**: Una pagina che spiega i servizi che offre
--**Contatti**: Una pagina con un modulo di contatto e dettagli per raggiungere la boutique (indirizzo, telefono, email).
+- **Home Page**: Una pagina principale che presenta la boutique, con un'introduzione al marchio .
+- **About**: Una pagina che descrive la storia della boutique, la missione e la visione.
+- **Servizi**: Una pagina che spiega i servizi che offre
+- **Contatti**: Una pagina con un modulo di contatto e dettagli per raggiungere la boutique (indirizzo, telefono, email).
 
 ## Tecnologie Utilizzate
--**HTML5**: Per la struttura e il contenuto delle pagine.
--**CSS3**: Per la stilizzazione e la responsività del sito.
+- **HTML5**: Per la struttura e il contenuto delle pagine.
+- **CSS3**: Per la stilizzazione e la responsività del sito.
 
 ## Contribuire
 
