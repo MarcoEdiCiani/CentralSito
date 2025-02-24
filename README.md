@@ -1,12 +1,12 @@
-Sito Web di Moda
+#Sito Web di Moda
 Un sito web di esempio creato per una boutique di moda. Il sito include 4 pagine principali: Home, About, Servizi e Contatti.
 È sviluppato con HTML5 e CSS3 per presentare in modo semplice ed elegante i prodotti e le informazioni della boutique.
 
-Funzionalità
-Home Page: Una pagina principale che presenta la boutique, con un'introduzione al marchio .
-About: Una pagina che descrive la storia della boutique, la missione e la visione.
-Servizi: Una pagina che spiega i servizi che offre
-Contatti: Una pagina con un modulo di contatto e dettagli per raggiungere la boutique (indirizzo, telefono, email).
+##Funzionalità
+-**Home Page**: Una pagina principale che presenta la boutique, con un'introduzione al marchio .
+-**About**: Una pagina che descrive la storia della boutique, la missione e la visione.
+-**Servizi**: Una pagina che spiega i servizi che offre
+-**Contatti**: Una pagina con un modulo di contatto e dettagli per raggiungere la boutique (indirizzo, telefono, email).
 
 ## Tecnologie Utilizzate
 -**HTML5**: Per la struttura e il contenuto delle pagine.
